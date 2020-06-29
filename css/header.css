@@ -1,0 +1,40 @@
+#navigation {
+  height: 80px;
+  width: 100%;
+  background: var(--gray-dark);
+  position: fixed;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+}
+
+#navigation.header-small {
+  height: 60px;
+}
+
+#navigation .container {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    'logo nav';
+}
+
+#logo {
+  grid-area: logo;
+  white-space: nowrap;
+  color: var(--light);
+  text-transform: uppercase;
+}
+
+#nav {
+  grid-area: nav;
+}
+
+#nav ul {
+  display: inline-block;
+}
+
+#nav li {
+  display: inline-block;
+}
