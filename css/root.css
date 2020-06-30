@@ -1,19 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
-*,
-::after,
-::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-}
-
-:root{
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -27,28 +15,107 @@ body{
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
+  --gray-light: #a7a7a7;
+
   --primary: #007bff;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-  --light: #f8f9fa;
+  --light: #ebebd9;
   --dark: #343a40;
+  --black: #000;
+  --opacity1: rgba(255,255,255, .1);
+  --opacity3: rgba(255,255,255, .3);
+  --opacity5: rgba(255,255,255, .5);
+}
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+/* верхня розпорка */
+.spacer {
+  height: 80px;
+  background: var(--dark);
 }
 
 /* основна шпальта */
-.container{
+.container {
   width: 1200px;
   margin: auto;
 }
 
-@media(max-width: 1240px){
-  .container{
+@media(max-width: 1240px) {
+  .container {
     width: 95%;
   }
 }
 
-img{
+img {
   max-width: 100%;
+}
+
+h1 {
+  font-size: 38px;
+  margin: 0 0 30px;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 0 0 30px;
+}
+
+h3 {
+  font-size: 26px;
+  margin: 0 0 30px;
+}
+
+h4 {
+  font-size: 22px;
+  margin: 0 0 30px;
+}
+
+h5 {
+  font-size: 18px;
+  margin: 0 0 30px;
+}
+
+p {
+  margin: 0 0 30px;
+  line-height: 1.85;
+}
+
+/* заголовки */
+.title {
+  text-align: center;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+/* короткий опис */
+.lead {
+  width: 60%;
+  margin: auto auto 30px;
+  text-align: center;
+  letter-spacing: 0px;
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@media(max-width: 776px){
+  .lead{
+    width: 95%;
+  }
 }

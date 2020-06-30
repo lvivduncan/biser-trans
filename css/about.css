@@ -1,0 +1,11 @@
+
+/* головна, блок під скілами */
+#about{
+  padding: 60px 0;
+  background: var(--white);
+}
+
+#about p{
+  text-align: justify;
+  font-style: italic;
+}

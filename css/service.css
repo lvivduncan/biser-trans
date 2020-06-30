@@ -1,0 +1,166 @@
+/* головна, блок під "про нас" */
+
+#service {
+  padding: 60px 0;
+  background: var(--light);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    'service-header service-header service-header service-header service-header service-header'
+    'service-article-1 service-article-2 service-article-3 service-article-4 service-article-5 service-article-6'
+    'service-footer service-footer service-footer service-footer service-footer service-footer';
+}
+
+@media(max-width: 1140px) {
+  #service {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'service-header service-header service-header'
+      'service-article-1 service-article-2 service-article-3'
+      'service-article-4 service-article-5 service-article-6'
+      'service-footer service-footer service-footer';
+  }
+}
+
+@media(max-width: 776px) {
+  #service {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'service-header service-header'
+      'service-article-1 service-article-2'
+      'service-article-3 service-article-4'
+      'service-article-5 service-article-6'
+      'service-footer service-footer';
+  }
+}
+
+@media(max-width: 500px) {
+  #service {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'service-header'
+      'service-article-1'
+      'service-article-2'
+      'service-article-3'
+      'service-article-4'
+      'service-article-5'
+      'service-article-6'
+      'service-footer';
+  }
+}
+
+#service header {
+  grid-area: service-header;
+  margin: 0 0 30px;
+}
+
+#service h1 {
+  font-size: 28px;
+}
+
+#service article {
+  height: 300px;
+  overflow: hidden;
+}
+
+#service article a {
+  display: block;
+  height: 300px;
+  text-decoration: none;
+  color: var(--dark);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-transition: transform .5s, background .3s;
+  transition: transform .5s, background .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+#service article a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--opacity5);
+  z-index: 1;
+}
+
+#service article a:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#service article a:hover::after {
+  background: var(--opacity1);
+}
+
+#service h3 {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 10px 20px;
+  color: var(--light);
+  background: var(--dark);
+}
+
+#service article a:hover h3 {
+  color: var(--dark);
+  background: var(--light);
+}
+
+#service article:nth-of-type(1) a {
+  grid-area: service-article-1;
+  background: url('../temp/01.png');
+}
+
+#service article:nth-of-type(2) a {
+  grid-area: service-article-2;
+  background: url('../temp/02.png');
+}
+
+#service article:nth-of-type(3) a {
+  grid-area: service-article-3;
+  background: url('../temp/03.png');
+}
+
+#service article:nth-of-type(4) a {
+  grid-area: service-article-4;
+  background: url('../temp/04.png');
+}
+
+#service article:nth-of-type(5) a {
+  grid-area: service-article-5;
+  background: url('../temp/05.png');
+}
+
+#service article:nth-of-type(6) a {
+  grid-area: service-article-6;
+  background: url('../temp/06.png');
+}
+
+#service footer {
+  grid-area: service-footer;
+  margin: 30px 0;
+  text-align: center;
+}
+
+#service footer a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 20px;
+  background: var(--yellow);
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
