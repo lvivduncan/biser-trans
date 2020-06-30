@@ -5,6 +5,10 @@
   background: var(--white);
 }
 
+#about .title{
+  text-transform: none;
+}
+
 #about p{
   text-align: justify;
   font-style: italic;
