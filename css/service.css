@@ -3,39 +3,42 @@
 #service {
   padding: 60px 0;
   background: var(--light);
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas:
-    'service-header service-header service-header service-header service-header service-header'
-    'service-article-1 service-article-2 service-article-3 service-article-4 service-article-5 service-article-6'
-    'service-footer service-footer service-footer service-footer service-footer service-footer';
 }
 
-@media(max-width: 1140px) {
-  #service {
+#service .container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    'service-header service-header service-header service-header service-header'
+    'service-article-1 service-article-2 service-article-3 service-article-4 service-article-5'
+    'service-footer service-footer service-footer service-footer service-footer';
+}
+
+@media(max-width: 996px) {
+  #service .container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       'service-header service-header service-header'
       'service-article-1 service-article-2 service-article-3'
-      'service-article-4 service-article-5 service-article-6'
+      'service-article-4 service-article-5 service-article-5'
       'service-footer service-footer service-footer';
   }
 }
 
-@media(max-width: 776px) {
-  #service {
+@media(max-width: 620px) {
+  #service .container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       'service-header service-header'
       'service-article-1 service-article-2'
       'service-article-3 service-article-4'
-      'service-article-5 service-article-6'
+      'service-article-5 service-article-5'
       'service-footer service-footer';
   }
 }
 
-@media(max-width: 500px) {
-  #service {
+@media(max-width: 400px) {
+  #service .container {
     grid-template-columns: 1fr;
     grid-template-areas:
       'service-header'
@@ -44,7 +47,6 @@
       'service-article-3'
       'service-article-4'
       'service-article-5'
-      'service-article-6'
       'service-footer';
   }
 }
@@ -59,13 +61,15 @@
 }
 
 #service article {
-  height: 300px;
   overflow: hidden;
+  text-align: center;
+  padding: 10px;
 }
 
 #service article a {
   display: block;
-  height: 300px;
+  height: 160px;
+  width: 160px;
   text-decoration: none;
   color: var(--dark);
   background-size: cover;
@@ -73,32 +77,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  -webkit-transition: transform .5s, background .3s;
-  transition: transform .5s, background .3s;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  flex-direction: column;
+  /* border: 1px solid var(--black); */
+  border: 1px solid var(--yellow);
+  margin: auto;
+  -webkit-transition: background .5s;
+  transition: background .5s;
 }
 
-#service article a::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: var(--opacity5);
-  z-index: 1;
+#service article a:hover{
+  background: var(--dark);
+  color: var(--light);
+  border: 1px solid var(--black);
 }
 
-#service article a:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+#service article img{
+  height: 42px;
 }
 
-#service article a:hover::after {
-  background: var(--opacity1);
+#service article a:hover img{
+  filter: invert(100%);
 }
 
 #service h3 {
@@ -109,43 +107,35 @@
   z-index: 2;
   margin: 0;
   padding: 10px 20px;
-  color: var(--light);
-  background: var(--dark);
+  color: var(--dark);
 }
 
 #service article a:hover h3 {
-  color: var(--dark);
-  background: var(--light);
+  color: var(--light);
 }
 
 #service article:nth-of-type(1) a {
   grid-area: service-article-1;
-  background: url('../temp/01.png');
 }
 
 #service article:nth-of-type(2) a {
   grid-area: service-article-2;
-  background: url('../temp/02.png');
 }
 
 #service article:nth-of-type(3) a {
   grid-area: service-article-3;
-  background: url('../temp/03.png');
 }
 
 #service article:nth-of-type(4) a {
   grid-area: service-article-4;
-  background: url('../temp/04.png');
 }
 
 #service article:nth-of-type(5) a {
   grid-area: service-article-5;
-  background: url('../temp/05.png');
 }
 
 #service article:nth-of-type(6) a {
   grid-area: service-article-6;
-  background: url('../temp/06.png');
 }
 
 #service footer {
@@ -157,10 +147,18 @@
 #service footer a {
   display: inline-block;
   text-decoration: none;
-  padding: 15px 20px;
+  padding: 10px 20px;
   background: var(--yellow);
-  color: var(--dark);
+  color: var(--black);
   text-transform: uppercase;
   font-size: 13px;
   font-weight: bold;
+  -webkit-transition: color .5s, background .5s;
+  transition: color .5s, background .5s;
+}
+
+#service footer a:focus,
+#service footer a:hover {
+  background:  var(--black);
+  color: var(--yellow);
 }

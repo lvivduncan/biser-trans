@@ -28,3 +28,7 @@ class LevusOnslide{constructor(s){this.slider=document.querySelector(s),this.sli
 
 // init slider
 new LevusOnslide("#levus-slider").init();
+
+// levus-animate
+const height = document.documentElement.clientHeight; const elements = document.querySelectorAll('.levus-animate');
+elements.forEach(element => element.parentElement.classList.add('hidden')); window.addEventListener('scroll', () => elements.forEach(item => item.getBoundingClientRect().top < height && item.classList.add('show')));

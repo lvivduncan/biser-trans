@@ -1,0 +1,15 @@
+#footer {
+  padding: 50px 0;
+  /* background: url('../images/track.png') no-repeat center center; */
+  /* background-size: cover; */
+  position: relative;
+}
+
+#footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
