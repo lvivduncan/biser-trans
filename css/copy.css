@@ -1,0 +1,17 @@
+
+#copy{
+  text-align: center;
+  padding: 5px;
+  background: var(--opacity-dark);
+  color: var(--dark);
+  font-size: 12px;
+}
+
+#copy p{
+  margin: 0;
+}
+
+#copy a{
+  color: var(--dark);
+  text-decoration: underline;
+}

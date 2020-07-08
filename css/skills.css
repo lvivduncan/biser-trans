@@ -9,15 +9,16 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 #skills article{
   padding: 20px;
-  /* border-radius: 160px; */
   height: 160px;
   width: 160px;
   background: var(--yellow);
   text-align: center;
+  margin: 10px;
 }
 
 #skills article h4{
