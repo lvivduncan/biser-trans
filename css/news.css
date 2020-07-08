@@ -12,22 +12,22 @@
 
 #news .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
 
-#news .container article {
+@media(max-width: 700px){
+  #news .container{
+    grid-template-columns: 1fr;
+  }
+}
+
+#news article {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
-
-#news figure{
-  /* outline: 1px solid var(--dark); */
-  outline-color: transparent;
-}
-
-#news article:hover figure{
-  /* outline-color: transparent; */
+  justify-content: center;
+  align-items: center;
+  background: var(--yellow);
 }
 
 #news figure img{
@@ -42,18 +42,70 @@
 #news article a {
   display: block;
   text-decoration: none;
-  color: var(--orange);
-  padding: 5px;
   font-size: 14px;
+  color: var(--black);
+  padding: 20px;
   font-weight: bold;
-  outline: 1px solid var(--yellow);
+  text-align: center;
 }
 
-#news article a:hover {
+#news article:hover {
   text-decoration: underline;
+}
+
+/* 3 i 4 */
+#news article:nth-child(3) figure,
+#news article:nth-child(4) figure{
+  order: 2;
+}
+
+#news article:nth-child(3) a,
+#news article:nth-child(4) a{
+  order: 1;
+}
+
+@media(max-width: 700px){
+  #news article:nth-child(1) figure,
+  #news article:nth-child(3) figure{
+    order: 2;
+  }
+  
+  #news article:nth-child(1) a,
+  #news article:nth-child(3) a{
+    order: 1;
+  }
+
+  #news article:nth-child(2) figure,
+  #news article:nth-child(4) figure{
+    order: 1;
+  }
+  
+  #news article:nth-child(2) a,
+  #news article:nth-child(4) a{
+    order: 2;
+  }
 }
 
 #news footer {
   text-align: center;
-  padding: 10px;
+  margin: 30px 0;
+}
+
+#news footer a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: var(--yellow);
+  color: var(--black);
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  -webkit-transition: color .5s, background .5s;
+  transition: color .5s, background .5s;
+}
+
+#news footer a:focus,
+#news footer a:hover {
+  background:  var(--black);
+  color: var(--yellow);
 }
