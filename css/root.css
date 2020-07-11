@@ -183,3 +183,14 @@ p {
   padding: 5px;
   text-transform: uppercase;
 }
+
+/* edit button */
+.edit{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  padding: 5px;
+  background: var(--red);
+  color: var(--white);
+  text-decoration: none;
+}

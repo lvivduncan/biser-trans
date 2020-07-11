@@ -1,12 +1,12 @@
 
 
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+// const $ = document.querySelector.bind(document);
+// const $$ = document.querySelectorAll.bind(document);
 
 // темно-сіра смуга навігації, лого + інше
-const navigation = $('#navigation');
-const a = $$('#levus-menu.desktop ul a');
-const logo = $('#logo');
+const navigation = document.querySelector('#navigation');
+const a = document.querySelectorAll('#levus-menu.desktop ul a');
+const logo = document.querySelector('#logo');
 
 window.addEventListener('scroll', () => {
   if(window.pageYOffset > 20){
@@ -27,8 +27,7 @@ window.addEventListener('scroll', () => {
 class LevusOnslide{constructor(s){this.slider=document.querySelector(s),this.slides=this.slider.querySelectorAll("article"),this.left=this.slider.querySelector("#levus-left"),this.right=this.slider.querySelector("#levus-right"),this.length=this.slides.length-1,this.first=this.slides[0],this.cnt=0}click(){this.left.addEventListener("click",()=>{setTimeout(()=>{this.slides.forEach(s=>s.removeAttribute("class")),this.cnt<this.length?this.cnt++:this.cnt=0,this.slides[this.cnt].classList.add("show")},500)}),this.right.addEventListener("click",()=>{setTimeout(()=>{this.slides.forEach(s=>s.removeAttribute("class")),0===this.cnt?this.cnt=this.length:this.cnt--,this.slides[this.cnt].classList.add("show")},500)})}arrow(){this.left.classList.add("hide"),this.right.classList.add("hide"),this.slider.addEventListener("mouseover",()=>{this.left.removeAttribute("class"),this.right.removeAttribute("class")}),this.slider.addEventListener("mouseout",()=>{this.left.classList.add("hide"),this.right.classList.add("hide")})}autoScroll(){setInterval(()=>{this.slides.forEach(s=>s.removeAttribute("class")),this.cnt<this.length?this.cnt++:this.cnt=0,this.slides[this.cnt].classList.add("show")},8e3)}init(){this.click(),this.first.classList.add("show"),this.arrow(),window.addEventListener("resize",()=>window.innerWidth<1200&&this.autoScroll())}}
 
 // init slider
-new LevusOnslide("#levus-slider").init();
+document.querySelector("#levus-slider") && new LevusOnslide("#levus-slider").init();
 
 // levus-animate
-const height = document.documentElement.clientHeight; const elements = document.querySelectorAll('.levus-animate');
-elements.forEach(element => element.parentElement.classList.add('hidden')); window.addEventListener('scroll', () => elements.forEach(item => item.getBoundingClientRect().top < height && item.classList.add('show')));
+{const height=document.documentElement.clientHeight,elements=document.querySelectorAll(".levus-animate");elements.forEach(e=>e.parentElement.classList.add("hidden")),window.addEventListener("scroll",()=>elements.forEach(e=>e.getBoundingClientRect().top<height&&e.classList.add("show")));}

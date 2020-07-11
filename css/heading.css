@@ -1,8 +1,10 @@
 /* блок зі заголовком (назвою сторінки) */
 #heading {
   background-size: cover !important;
+  background-attachment: fixed!important;
   height: 260px;
   display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -26,4 +28,32 @@
   position: relative;
   z-index: 2;
   padding: 10px;
+  margin: 0;
+}
+
+.bredcrumbs{
+  display: block;
+  z-index: 2;
+}
+
+.bredcrumbs li{
+  display: inline-block;
+  color: var(--opacity3);
+  font-size: 14px;
+}
+
+.bredcrumbs li a{
+  color: var(--opacity3);
+}
+
+.bredcrumbs li a:hover{
+  color: var(--opacity5);
+}
+
+.bredcrumbs li::before{
+  content: ' < ';
+}
+
+.bredcrumbs li:first-child::before{
+  content: '';
 }

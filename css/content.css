@@ -1,0 +1,19 @@
+
+
+#content{
+  padding: 120px 0;
+  background: var(--white);
+}
+
+#content .title{
+  text-transform: none;
+}
+
+#content p{
+  text-align: justify;
+}
+
+#content img{
+  max-width: 100%;
+  margin: 0 0 10px;
+}
