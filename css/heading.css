@@ -1,0 +1,29 @@
+/* блок зі заголовком (назвою сторінки) */
+#heading {
+  background-size: cover !important;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#heading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: var(--opacity-black-7);
+  z-index: 1;
+}
+
+#heading h1 {
+  color: var(--white);
+  font-weight: normal;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+}

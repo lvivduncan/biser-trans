@@ -45,7 +45,7 @@
   grid-area: footer-nav;
 }
 
-#footer-nav ul {
+/* #footer-nav ul {
   display: block;
   margin: 0 10px 10px;
   background: var(--yellow);
@@ -69,6 +69,10 @@
 #footer-nav a.current,
 #footer-nav a:hover {
   background: var(--black);
+} */
+
+#footer-nav iframe{
+  width: 100%!important;
 }
 
 #footer-social {
