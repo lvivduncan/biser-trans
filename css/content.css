@@ -13,6 +13,11 @@
   text-align: justify;
 }
 
+#content figure{
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
 #content img{
   max-width: 100%;
   margin: 0 0 10px;
