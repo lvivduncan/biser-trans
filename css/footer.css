@@ -5,7 +5,7 @@
 
 #footer .container {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1.5fr 1fr;
   grid-template-areas:
     'footer-info footer-nav footer-social';
   grid-gap: 20px;
@@ -71,7 +71,7 @@
   background: var(--black);
 } */
 
-#footer-nav iframe{
+#footer iframe{
   width: 100%!important;
 }
 
