@@ -46,8 +46,20 @@
   display: flex;
 }
 
+@media(max-width: 776px){
+  #footer-map{
+    display: block;
+  }
+}
+
 #footer iframe{
   width: 50%!important;
+}
+
+@media(max-width: 776px){
+  #footer iframe{
+    width: 100%!important;
+  }
 }
 
 #footer-social {
@@ -69,6 +81,7 @@
 }
 
 #footer-social img{
+  width: 16px!important;
   height: 16px!important;
   position: relative;
   top: 3px;
