@@ -68,19 +68,14 @@
   position: relative;
 }
 
-#footer-social li::before {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: var(--dark);
-  display: block;
-  top: 4px;
-  left: -6px;
+#footer-social img{
+  height: 16px!important;
+  position: relative;
+  top: 3px;
 }
 
 #footer-social a {
-  color: var(--orange);
+  color: var(--black);
   text-decoration: underline;
 }
 
