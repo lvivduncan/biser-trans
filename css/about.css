@@ -1,15 +1,45 @@
-
 /* головна, блок під скілами */
-#about{
-  padding: 60px 0;
-  background: var(--white);
+
+#about {
+    padding: 60px 0;
+    background: var(--white);
 }
 
-#about .title{
-  text-transform: none;
+#about .title {
+    text-transform: none;
 }
 
-#about p{
-  text-align: justify;
-  font-style: italic;
+#about p {
+    text-align: justify;
+    font-style: italic;
+}
+
+#about ul {
+    margin: 20px 40px;
+}
+
+@media(max-width: 776px) {
+    #about ul {
+        margin: 10px 10px 10px 40px;
+    }
+}
+
+#about li {
+    margin: 15px 0 15px 10px;
+    font-style: italic;
+    display: block;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+#about li::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/done.png') no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 2px;
+    right: 3px;
 }
