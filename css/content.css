@@ -1,28 +1,35 @@
-
-
-#content{
-  padding: 120px 0;
-  background: var(--white);
+#content {
+    padding: 120px 0;
+    background: var(--white);
 }
 
-#content .title{
-  text-transform: none;
+#content .title {
+    text-transform: none;
 }
 
-#content p{
-  text-align: justify;
+#content p {
+    text-align: justify;
 }
 
-#content figure{
-  float: left;
-  margin: 0 20px 20px 0;
+#content figure {
+    float: right;
+    margin: 0 0 20px 20px;
 }
 
-#content img{
-  max-width: 100%;
-  margin: 0 0 10px;
+#content img {
+    max-width: 100%;
+    margin: 0 0 10px;
 }
 
-#content iframe{
-  width: 100%!important;
+#content iframe {
+    width: 100%!important;
+}
+
+#content ul,
+#content ol {
+    margin: 0 0 0 40px;
+}
+
+#content li {
+    margin: 5px 0;
 }
