@@ -3,6 +3,13 @@
     background: var(--white);
 }
 
+
+/* щоб галерея не вилазила */
+
+#content article {
+    overflow: hidden;
+}
+
 #content .title {
     text-transform: none;
 }
