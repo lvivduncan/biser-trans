@@ -1,0 +1,51 @@
+/* кнопка для телефонів та контактів */
+
+#phone {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+    height: 100vh;
+    width: 0;
+    background: var(--light);
+    border-left: 1px solid var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-transition: width .5s;
+    transition: width .5s;
+}
+
+#phone span {
+    position: absolute;
+    top: 50%;
+    left: -32px;
+    height: 32px;
+    width: 32px;
+    background: var(--light) url(../images/phone.png) no-repeat;
+    background-size: cover;
+    border: 1px solid var(--yellow);
+    border-right: none;
+    cursor: pointer;
+    z-index: 12;
+}
+
+#phone p {
+    opacity: 0;
+    margin: 5px 0;
+}
+
+#phone a {
+    display: block;
+    color: var(--red);
+    text-decoration: none;
+}
+
+#phone:hover {
+    width: 200px;
+}
+
+#phone:hover p {
+    opacity: 1;
+}
