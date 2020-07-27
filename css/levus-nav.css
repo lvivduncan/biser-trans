@@ -334,3 +334,13 @@ mobile menu arrow
 #levus-menu.mobile li#phone {
     display: block!important;
 }
+
+
+/* 27-07-2020 */
+
+@media(max-width: 1200px) {
+    #levus-menu.mobile li#phone,
+    #levus-menu.mobile li#lang {
+        display: none!important;
+    }
+}
