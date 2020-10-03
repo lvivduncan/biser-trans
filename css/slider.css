@@ -1,6 +1,6 @@
 
 #levus-slider {
-  height: 530px;
+  height: 600px;
   position: relative;
   overflow: hidden;
   background: var(--black);
@@ -95,7 +95,7 @@
 #levus-slider article {
   background-size: cover !important;
   background-position: center !important;
-  height: 530px;
+  height: 600px;
   width: 100%;
   visibility: hidden;
   position: absolute;

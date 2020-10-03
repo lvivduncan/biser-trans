@@ -19,7 +19,7 @@
   justify-content: space-between;
 }
 
-@media(max-width: 1200px){
+@media(max-width: 600px){
   #navigation .container{
     text-align: center;
     flex-flow: column;
