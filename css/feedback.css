@@ -1,89 +1,58 @@
 #feedback {
   position: relative;
-  padding: 25px 0;
-  background: url('../images/track.png') no-repeat center center;
-  background-size: cover;
-}
-
-#feedback::after{
-  content: '';
-  position: absolute;
-  z-index: 2;
-  top:0;
-  left: 0;
-  bottom:0;
-  right: 0;
-  background: var(--dark);
-  width: 50%;
-}
-
-@media(max-width: 600px){
-  #feedback::after{
-    display: none;
-  }
-}
-
-#feedback::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: var(--opacity-yellow);
-}
-
-#feedback .container {
-  position: relative;
-  z-index: 3;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    'feedback-text feedback-form';
-  grid-gap: 50px;
-}
-
-
-@media(max-width: 600px){
-  #feedback .container{
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      'feedback-text'
-      'feedback-form';
-  }
-}
-
-
-/* текст зліва */
-#feedback-text {
-  grid-area: feedback-text;
-}
-
-#feedback-text p,
-#feedback-text h1,
-#feedback-text h2,
-#feedback-text h3,
-#feedback-text h4 {
-  color: var(--light);
-  margin: 0 0 5px;
+  margin: 50px 0;
 }
 
 #feedback strong{
-  letter-spacing: 1px;
-  font-size: 26px;
+  font-weight: normal;
+  background: var(--blue);
+  color: var(--light);
+  padding: 1px 5px;
 }
 
-#feedback p{
-  text-transform: uppercase;
+#feedback em{
+  font-style: normal;
+  background: var(--red);
+  color: var(--light);
+  padding: 1px 5px;
 }
 
-/* форма справа */
-#feedback-form {
-  grid-area: feedback-form;
+#feedback h1{
+  color: var(--red);
 }
 
-#feedback-form form {
+#feedback .container{
+  display: flex;
+}
+
+@media(max-width: 992px){
+  #feedback .container{
+      flex-flow: column-reverse;
+  }
+}
+
+#feedback-left {
+  width: 60%;
+}
+
+#feedback-right {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media(max-width: 992px){
+  #feedback-left {
+    width: 100%;
+  }
+
+  #feedback-right {
+    width: 100%;
+  }
+}
+
+#feedback form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
@@ -93,7 +62,7 @@
 }
 
 @media(max-width: 600px){
-  #feedback-form form {
+  #feedback form {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       'feedback-form-textarea feedback-form-textarea'
@@ -101,56 +70,64 @@
   }
 }
 
-#feedback-form input[type="text"] {
+#feedback input[type="text"] {
+  font-family: 'Montserrat', sans-serif;
   grid-area: feedback-form-input;
   width: 100%;
   padding: 10px;
   display: block;
   outline: none;
   border: none;
-  background: var(--opacity5);
+  background: var(--green);
+  color: var(--light);
+  border-radius: 6px;
+
   -webkit-transition: background .5s;
   transition: background .5s;
 
-  font-family: 'Open Sans', sans-serif;
 }
 
-#feedback-form textarea {
+#feedback textarea {
+  font-family: 'Montserrat', sans-serif;
   grid-area: feedback-form-textarea;
   width: 100%;
-  height: 80px;
+  height: 160px;
   resize: none;
   padding: 10px;
   display: block;
   outline: none;
   border: none;
-  background: var(--opacity5);
+  background: var(--yellow);
+  color: var(--light);
+  border-radius: 6px;
+
   -webkit-transition: background .5s;
   transition: background .5s;
 
-  font-family: 'Open Sans', sans-serif;
 }
 
-#feedback-form input[type="text"]:focus,
-#feedback-form textarea:focus{
-  background: var(--light);
+#feedback input[type="text"]:focus,
+#feedback textarea:focus{
+  background: var(--gray-light);
 }
 
-#feedback-form button {
+#feedback button {
   grid-area: feedback-form-button;
   background: var(--yellow);
   font-weight: bold;
-  color: var(--black);
+  color: var(--light);
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
   border: none;
+  border-radius: 6px;
+  background: var(--blue);
+
   -webkit-transition: color .5s, background .5s;
   transition: color .5s, background .5s;
 }
 
-#feedback-form button:focus,
-#feedback-form button:hover{
-  background:  var(--black);
-  color: var(--yellow);
+#feedback button:focus,
+#feedback button:hover{
+  background: var(--green);
 }

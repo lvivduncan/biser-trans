@@ -1,45 +1,93 @@
-/* головна, блок під скілами */
-
-#about {
-    padding: 60px 0;
-    background: var(--white);
+#about{
+    margin: 100px 0;
 }
 
-#about .title {
-    text-transform: none;
-}
-
-#about p {
-    text-align: justify;
-    font-style: italic;
-}
-
-#about ul {
-    margin: 20px 40px;
-}
-
-@media(max-width: 776px) {
-    #about ul {
-        margin: 10px 10px 10px 40px;
+@media(max-width: 992px){
+    #about{
+        margin: 10px 0;
     }
 }
 
-#about li {
-    margin: 15px 0 15px 10px;
-    font-style: italic;
-    display: block;
-    line-height: 1.8;
-    text-align: justify;
+#about .container{
+    display: flex;
 }
 
-#about li::before {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: url('../images/done.png') no-repeat;
-    background-size: cover;
-    position: relative;
-    top: 2px;
-    right: 3px;
+@media(max-width: 992px){
+    #about .container{
+        flex-flow: column;
+    }
+}
+
+#about-left{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+@media(max-width: 992px){
+    #about-left{
+        width: 100%;        
+    }
+}
+
+#about-left h1{
+    color: var(--green);
+    margin: 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width: 500px){
+    #about-left h1{
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+}
+
+#about-left p{
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+@media(max-width: 500px){
+    #about-left p{
+        line-height: 1.5;
+        letter-spacing: 0;
+        font-size: 16px;
+    }
+}
+
+#about-right{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 50px;
+    background: var(--light);
+    border-radius: 6px;
+}
+
+@media(max-width: 992px){
+    #about-right{
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+#about-right strong{
+    font-weight: normal;
+    background: var(--blue);
+    color: var(--light);
+    padding: 1px 5px;
+}
+
+#about-right em{
+    font-style: normal;
+    background: var(--red);
+    color: var(--light);
+    padding: 1px 5px;
 }

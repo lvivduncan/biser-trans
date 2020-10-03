@@ -1,16 +1,17 @@
 @import url('./root.css');
 @import url('./navigation.css');
-@import url('./levus-nav.css');
+/* @import url('./levus-nav.css'); */
 @import url('./slider.css');
 @import url('./heading.css');
 @import url('./content.css');
 @import url('./skills.css');
 @import url('./about.css');
-@import url('./service.css');
+/* @import url('./service.css'); */
 @import url('./levus-animate.css');
-@import url('./news.css');
+/* @import url('./news.css'); */
+@import url('./gallery.css');
 @import url('./feedback.css');
 @import url('./footer.css');
 @import url('./copy.css');
-@import url('./phone-mobile.css');
-@import url('./lang-mobile.css');
+/* @import url('./phone-mobile.css'); */
+/* @import url('./lang-mobile.css'); */

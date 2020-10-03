@@ -2,8 +2,8 @@
 #copy{
   text-align: center;
   padding: 5px;
-  background: var(--opacity-dark);
-  color: var(--dark);
+  background: var(--gray-dark);
+  color: var(--light);
   font-size: 12px;
 }
 
@@ -12,6 +12,6 @@
 }
 
 #copy a{
-  color: var(--dark);
+  color: var(--light);
   text-decoration: underline;
 }

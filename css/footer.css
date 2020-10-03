@@ -1,83 +1,69 @@
 #footer {
-    padding: 100px 0 30px;
-    background: url('../images/bg.png');
+    /* margin: 50px 0; */
+    padding: 25px 0;
+    background: var(--light);
 }
 
-#footer ul {
-    display: block;
-    padding: 0 0 0 30px;
+#footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#footer li {
-    display: block;
-    margin: 5px 0;
-    padding: 0 0 0 15px;
-    font-size: 12px;
-    font-weight: bold;
-    position: relative;
+@media(max-width: 600px){
+    #footer .container{
+        flex-flow: column;
+    }
 }
 
-#footer img {
-    width: 16px!important;
-    height: 16px!important;
-    position: relative;
-    top: 3px;
-}
-
-#footer a {
-    color: var(--black);
-    text-decoration: underline;
-}
-
-#footer a:hover {
+#footer a{
+    color: var(--red);
     text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-#footer p {
-    margin: 0 0 5px;
-    font-size: 12px;
-}
-
-#footer .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 'footer-map footer-shedule footer-info footer-social';
-    grid-gap: 20px;
-}
-
-@media(max-width: 776px) {
-    #footer .container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 'footer-map footer-shedule' 'footer-info footer-social';
+@media(max-width: 600px){
+    #footer a{
+        font-size: 22px;
+        margin: 10px 0;
     }
 }
 
-@media(max-width: 500px) {
-    #footer .container {
-        grid-template-columns: 1fr;
-        grid-template-areas: 'footer-map' 'footer-shedule' 'footer-info' 'footer-social';
+#footer svg{
+    width: 32px;
+    fill: var(--red);
+    margin-right: 10px;
+}
+
+@media(max-width: 600px){
+    #footer svg{
+        width: 24px;
     }
 }
 
-#footer-map {
-    grid-area: footer-map;
+#footer a:nth-child(2){
+    color: var(--green);
 }
 
-#footer-info {
-    grid-area: footer-info;
+#footer a:nth-child(3){
+    color: var(--blue);
 }
 
-#footer-info p {
-    text-align: justify;
-    font-style: italic;
-    margin: 20px 0;
-    font-size: 14px;
+#footer a:nth-child(4){
+    color: var(--gray-dark);
 }
 
-#footer iframe {
-    width: 100%!important;
+#footer a:nth-child(2) svg{
+    fill: var(--green);
 }
 
-#footer-social {
-    grid-area: footer-social;
+#footer a:nth-child(3) svg{
+    fill: var(--blue);
+}
+
+#footer a:nth-child(4) svg{
+    fill: var(--gray-dark);
 }
